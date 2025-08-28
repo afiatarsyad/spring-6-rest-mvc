@@ -1,4 +1,4 @@
-package learning.springframework.spring6restmvc.model.controller;
+package learning.springframework.spring6restmvc.controller;
 
 import learning.springframework.spring6restmvc.model.Beer;
 import learning.springframework.spring6restmvc.service.BeerService;
@@ -74,4 +74,5 @@ public class BeerController {
 
         return beerService.getBeerById(beerId);
     }
+
 }
