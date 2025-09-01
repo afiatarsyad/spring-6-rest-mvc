@@ -1,6 +1,5 @@
 package learning.springframework.spring6restmvc.service;
 
-import ch.qos.logback.core.util.StringUtil;
 import learning.springframework.spring6restmvc.model.Beer;
 import learning.springframework.spring6restmvc.model.BeerStyle;
 import lombok.extern.slf4j.Slf4j;
@@ -67,11 +66,11 @@ public class BeerServiceImpl implements BeerService {
     }
 
     @Override
-    public Beer getBeerById(UUID id) {
+    public Optional<Beer> getBeerById(UUID id) {
 
         log.info("Get Beer by id - in service ID: " + id.toString());
 
-        return beerMap.get(id);
+        return Optional.of(beerMap.get(id));
     }
 
     @Override
